@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import routes from "../../routes";
 import styles from "./MoviesFolderStyles.module.css";
 import PropTypes from "prop-types";
-uuidv4();
 
 const MoviesFolder = ({ arrayOfMovies, locationTo }) => {
   return (

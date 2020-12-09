@@ -11,6 +11,7 @@ export default class Movies extends Component {
 
   componentDidMount = () => {
     const { query } = queryString.parse(this.props.location.search);
+
     if (query) {
       SearchAPI.axiosFilms(query)
         .then((response) => this.setState({ films: response }))

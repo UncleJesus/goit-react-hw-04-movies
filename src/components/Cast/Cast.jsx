@@ -8,7 +8,9 @@ export default class Cast extends Component {
 
   componentDidMount = () => {
     SearchAPI.axiosCast(this.props.match.params.movieId)
-      .then((response) => this.setState({ cast: response.cast }))
+      .then((response) => {
+        this.setState({ cast: response.cast });
+      })
       .catch((error) => this.setState({ error }));
   };
 

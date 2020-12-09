@@ -8,13 +8,14 @@ export default class Reviews extends Component {
 
   componentDidMount = () => {
     SearchAPI.axiosReviews(this.props.match.params.movieId)
-      .then((response) => this.setState({ reviews: response.results }))
+      .then((response) => {
+        this.setState({ reviews: response.results });
+      })
       .catch((error) => this.setState({ error }));
   };
 
   render() {
     const { reviews } = this.state;
-    console.log(reviews);
     return (
       <>
         {reviews.length > 0 ? (
@@ -29,9 +30,6 @@ export default class Reviews extends Component {
         ) : (
           <p>We don't have any reviews for this movie</p>
         )}
-        {/* {reviews === 0 && (
-          <p>We don't have any reviews for this movie</p>
-        )} */}
       </>
     );
   }
