@@ -40,10 +40,11 @@ const axiosReviews = (movieId) => {
     .then((response) => response.data);
 };
 
-export default {
+const apiResults = {
   axiosFilms,
   axiosTrendingFilms,
   axiosMovieDetails,
   axiosCast,
   axiosReviews,
 };
+export default apiResults;
