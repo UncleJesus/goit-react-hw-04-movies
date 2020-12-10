@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import SearchAPI from "../SearchAPI";
 import Cast from "../Cast/Cast";
 import Reviews from "../Reviews/Reviews";
-import { Link, Route } from "react-router-dom";
+import { Link, NavLink, Route } from "react-router-dom";
+import styles from "./MovieDetailsPageStyles.module.css";
 import routes from "../../routes";
 
 export default class MovieDetailsPage extends Component {
@@ -56,17 +57,23 @@ export default class MovieDetailsPage extends Component {
               <h3>Additional information</h3>
               <ul>
                 <li>
-                  <Link to={`/movies/${this.props.match.params.movieId}/cast`}>
+                  <NavLink
+                    className={styles.link}
+                    to={`/movies/${this.props.match.params.movieId}/cast`}
+                  >
                     Cast
-                  </Link>
-                  <Route path={routes.cast} component={Cast} />
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
+                    className={styles.link}
                     to={`/movies/${this.props.match.params.movieId}/reviews`}
                   >
                     Reviews
-                  </Link>
+                  </NavLink>
+                </li>
+                <li>
+                  <Route path={routes.cast} component={Cast} />
                   <Route path={routes.reviews} component={Reviews} />
                 </li>
               </ul>
