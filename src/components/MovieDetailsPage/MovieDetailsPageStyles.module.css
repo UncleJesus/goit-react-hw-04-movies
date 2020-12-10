@@ -4,3 +4,7 @@
   margin-right: 20px;
   margin-left: 40px;
 }
+
+.listStyleNone {
+  list-style: none;
+}

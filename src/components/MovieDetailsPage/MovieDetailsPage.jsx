@@ -41,7 +41,7 @@ export default class MovieDetailsPage extends Component {
               <h3>Overview</h3>
               <p>{movie.overview}</p>
               <h3>Genres</h3>
-              <ul>
+              <ul className={styles.listStyleNone}>
                 {movie.genres.map((genre) => (
                   <li key={genre.id}>{genre.name}</li>
                 ))}
@@ -55,7 +55,7 @@ export default class MovieDetailsPage extends Component {
 
             <div>
               <h3>Additional information</h3>
-              <ul>
+              <ul className={styles.listStyleNone}>
                 <li>
                   <NavLink
                     className={styles.link}

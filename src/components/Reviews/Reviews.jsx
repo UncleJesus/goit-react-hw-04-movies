@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchAPI from "../SearchAPI";
-
+import styles from "./ReviewsStyles.module.css";
 export default class Reviews extends Component {
   state = {
     reviews: [],
@@ -19,7 +19,7 @@ export default class Reviews extends Component {
     return (
       <>
         {reviews.length > 0 ? (
-          <ul>
+          <ul className={styles.listStyleNone}>
             {reviews.map((review) => (
               <li key={review.id}>
                 <h2>{review.author}</h2>

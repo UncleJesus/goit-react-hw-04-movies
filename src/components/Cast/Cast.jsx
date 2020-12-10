@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchAPI from "../SearchAPI";
-
+import styles from "./CastStyles.module.css";
 export default class Cast extends Component {
   state = {
     cast: null,
@@ -19,7 +19,7 @@ export default class Cast extends Component {
     return (
       <>
         {cast && (
-          <ul>
+          <ul className={styles.listStyleNone}>
             {cast.map((actor) => (
               <li key={actor.id}>
                 <p>{actor.name}</p>
