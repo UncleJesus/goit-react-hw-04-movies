@@ -63,8 +63,6 @@ export default class MovieDetailsPage extends Component {
                   >
                     Cast
                   </NavLink>
-                </li>
-                <li>
                   <NavLink
                     className={styles.link}
                     to={`/movies/${this.props.match.params.movieId}/reviews`}
